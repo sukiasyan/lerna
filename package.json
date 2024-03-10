@@ -1,0 +1,20 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "lerna:bootstrap": "lerna bootstrap --hoist -- --legacy-peer-deps",
+    "lerna:bootstrap:ci": "lerna bootstrap --hoist  --ci -- --production --unsafe-perm",
+    "lerna:build": "lerna run build --stream",
+    "lerna:clean": "lerna clean",
+    "lerna:publish": "lerna-publish",
+    "lerna:run:test:unit": "lerna run test:unit --stream",
+    "lerna:run:test:unit:coverage": "lerna run test:unit:coverage --stream",
+    "lerna:run:test:unit:coverage:ci": "lerna run test:unit:coverage:ci --stream",
+    "eslint:check": "eslint . --ext js --ext jsx --ext ts --ext tsx",
+    "prettier:check": "prettier --check '**/src/**/*.{ts,tsx,js}' \"!./packages/dashboard\"",
+    "prettier:format": "prettier --write '**/src/**/*.{ts,tsx,js}' "
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
